@@ -23,6 +23,7 @@ extends Node2D
 func _ready() -> void:
 	meat.position.x = point_meat_distance
 	meat.hitbox.damage = damage
+	z_index = 7 # pour que les armes apparaisent au dessus des autres éléments
 	
 
 func attack() -> void:
