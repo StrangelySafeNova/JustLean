@@ -2,9 +2,11 @@ extends RigidBody2D
 
 @export var health: int
 
+@onready var player = %Player
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	print(player)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -13,9 +15,12 @@ func _process(delta: float) -> void:
 
 func take_damage(damage: int) -> void:
 	health -= damage
-	if health >= 0:
+	print("Damage taken:", damage)
+	print("Current health:", health)
+
+	if health <= 0:
 		die()
 	
 func die() -> void:
-	print("dead")
+	print("Goblin died")
 	health = 20

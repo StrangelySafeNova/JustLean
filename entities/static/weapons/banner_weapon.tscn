@@ -10,6 +10,7 @@ attack_length = 0.2
 meat = NodePath("rotation_point/Banner_WeaponMeat")
 rotation_point = NodePath("rotation_point")
 point_meat_distance = 75
+damage = 10
 
 [node name="rotation_point" type="Node2D" parent="." unique_id=1842192033]
 

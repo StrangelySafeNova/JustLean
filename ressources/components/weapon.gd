@@ -17,9 +17,12 @@ extends Node2D
 @export var rotation_point: Node2D
 # distance entre le rotation point et la meat
 @export var point_meat_distance: int
+# Domage de l'arme
+@export var damage: int
 
 func _ready() -> void:
 	meat.position.x = point_meat_distance
+	meat.hitbox.damage = damage
 	
 
 func attack() -> void:

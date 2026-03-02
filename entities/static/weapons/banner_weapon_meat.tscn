@@ -4,9 +4,6 @@
 [ext_resource type="Script" uid="uid://c76mpmf51syxs" path="res://ressources/components/weapon_meat.gd" id="2_5ogd4"]
 [ext_resource type="Script" uid="uid://cp5ig4h0bdhq7" path="res://ressources/components/hitbox.gd" id="2_o8f54"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxn4k"]
-size = Vector2(57, 47)
-
 [sub_resource type="Animation" id="Animation_o8f54"]
 length = 0.001
 tracks/0/type = "value"
@@ -36,7 +33,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HitBox/CollisionShape2D:disabled")
+tracks/2/path = NodePath("../HitBox/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -76,7 +73,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HitBox/CollisionShape2D:disabled")
+tracks/2/path = NodePath("../HitBox/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -92,25 +89,29 @@ _data = {
 &"attack": SubResource("Animation_5ogd4")
 }
 
-[node name="Banner_WeaponMeat" type="Node2D" unique_id=860844465 node_paths=PackedStringArray("animation_player")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxn4k"]
+size = Vector2(75, 130)
+
+[node name="Banner_WeaponMeat" type="Node2D" unique_id=860844465 node_paths=PackedStringArray("animation_player", "hitbox")]
 script = ExtResource("2_5ogd4")
 animation_player = NodePath("AnimationPlayer")
+hitbox = NodePath("HitBox")
 metadata/_custom_type_script = "uid://c76mpmf51syxs"
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1932114724]
 texture = ExtResource("1_71w8f")
 
-[node name="HitBox" type="Area2D" parent="Sprite" unique_id=951260793]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=907418812]
+root_node = NodePath("../Sprite")
+libraries/ = SubResource("AnimationLibrary_8kgsj")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=951260793]
 position = Vector2(0, -5)
 script = ExtResource("2_o8f54")
 metadata/_custom_type_script = "uid://cp5ig4h0bdhq7"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/HitBox" unique_id=1937244554]
-position = Vector2(-0.5, -1.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1937244554]
+position = Vector2(-9.5, 7)
 shape = SubResource("RectangleShape2D_uxn4k")
 disabled = true
 debug_color = Color(0.9626362, 0.14546624, 0.33594915, 0.41960785)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=907418812]
-root_node = NodePath("../Sprite")
-libraries/ = SubResource("AnimationLibrary_8kgsj")
