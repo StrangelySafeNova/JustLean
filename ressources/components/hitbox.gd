@@ -1,7 +1,7 @@
 class_name HitBox
 extends Area2D
 
-@export var damage := 10 : set = set_damage, get = get_damage
+@export var damage: int
 
 func set_damage(new_damage: int) -> void:
 	damage = new_damage
