@@ -1,0 +1,23 @@
+[gd_scene format=4 uid="uid://bisy0p8v1xf74"]
+
+[ext_resource type="TileSet" uid="uid://c27syjoo177rq" path="res://scenes/main_tile_set.tres" id="1_k2fmo"]
+[ext_resource type="PackedScene" uid="uid://b3j6ddd13g2is" path="res://entities/player/player.tscn" id="2_l3cfh"]
+[ext_resource type="PackedScene" uid="uid://byabmqj0mbfgh" path="res://entities/ennemies/goblin_1.tscn" id="3_6q06x"]
+
+[node name="Main" type="Node2D" unique_id=1824804337]
+
+[node name="TileMap" type="Node2D" parent="." unique_id=117173919]
+
+[node name="Layer0" type="TileMapLayer" parent="TileMap" unique_id=1513564801]
+tile_map_data = PackedByteArray("AAADAAMAAgABAAEAAAACAAIAAgAAAAAAAAAGAAMAAgABAAEAAAAHAAIAAgACAAAAAAACAAQAAgAAAAIAAAAFAAQAAgAAAAIAAAAHAAQAAgACAAIAAAAEAAQAAgACAAIAAAAEAAMAAgACAAEAAAAHAAMAAgACAAEAAAACAAMAAgAAAAEAAAADAAQAAgABAAIAAAAGAAQAAgABAAIAAAADAAIAAgABAAAAAAAGAAIAAgABAAAAAAAFAAMAAgAAAAEAAAAEAAIAAgABAAEAAAAFAAIAAgABAAEAAAAEAAEAAgAAAAEAAAAEAAAAAgAAAAEAAAAEAP//AgAAAAEAAAAEAP7/AgAAAAEAAAAFAP7/AgACAAEAAAAFAP//AgACAAEAAAAFAAAAAgACAAEAAAAFAAEAAgACAAEAAAAEAP3/AgAAAAAAAAAFAP3/AgACAAAAAAA=")
+tile_set = ExtResource("1_k2fmo")
+
+[node name="Player" parent="." unique_id=1516205552 instance=ExtResource("2_l3cfh")]
+z_index = 5
+position = Vector2(233, 163)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1625837260]
+position_smoothing_enabled = true
+
+[node name="Goblin1" parent="." unique_id=675145452 instance=ExtResource("3_6q06x")]
+position = Vector2(410, 157)
