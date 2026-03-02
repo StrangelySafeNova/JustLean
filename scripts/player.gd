@@ -14,7 +14,7 @@ func _physics_process(_delta: float) -> void:
 	var ydirection := Input.get_axis("ui_up", "ui_down")
 	var direction: Vector2 = Vector2(xdirection, ydirection).normalized()
 
-	if direction.x:
+	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.y = direction.y * SPEED
 		animated_sprite.play("walk")
