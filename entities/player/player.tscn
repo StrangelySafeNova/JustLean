@@ -248,8 +248,8 @@ radius = 15.033297
 
 [node name="Player" type="CharacterBody2D" unique_id=1516205552 node_paths=PackedStringArray("weapon", "weapon_rotation_point")]
 script = ExtResource("1_g2els")
-weapon = NodePath("weapon_rotation_point/Weapon")
-weapon_rotation_point = NodePath("weapon_rotation_point")
+weapon = NodePath("Weapon")
+weapon_rotation_point = NodePath("")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=557881738]
 sprite_frames = SubResource("SpriteFrames_a8ls1")
@@ -266,8 +266,4 @@ debug_color = Color(0, 0.6466152, 0.24022007, 0.41960785)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1889194379]
 shape = SubResource("CircleShape2D_g2els")
 
-[node name="weapon_rotation_point" type="Node2D" parent="." unique_id=1062857521]
-
-[node name="Weapon" parent="weapon_rotation_point" unique_id=1440209454 node_paths=PackedStringArray("rotation_point") instance=ExtResource("4_bls4j")]
-position = Vector2(82, 0)
-rotation_point = NodePath("..")
+[node name="Weapon" parent="." unique_id=1440209454 instance=ExtResource("4_bls4j")]

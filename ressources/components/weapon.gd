@@ -1,19 +1,29 @@
+# Représente une arme, a obligatoirement besoin de :
+# - rotation point (n'importe quel Node2D)
+# - meat (qui contient le sprite, l'animation, hitbox, etc)
+# la meat DOIT être enfant du rotation point
 class_name Weapon
 extends Node2D
 
 @onready var _collision_shape = $CollisionShape2D
 
-# nom de l'animation donné lors de la création de l'animation
+# nom de l'animation donné lors de la création de l'animation (dans meat)
 @export var attack_animation: String
 # longueur de l'animation (en secondes)
 @export var attack_length: float
-# animation player qui contient l'animation
-@export var animation_player: AnimationPlayer
+# la meat
+@export var meat: WeaponMeat
 # point autour duquel l'arme tourne
 @export var rotation_point: Node2D
+# distance entre le rotation point et la meat
+@export var point_meat_distance: int
+
+func _ready() -> void:
+	meat.position.x = point_meat_distance
+	
 
 func attack() -> void:
-	animation_player.play(attack_animation)
+	meat.play(attack_animation)
 
 # Pour les attaques, l'animation devrait être utilisée pour activer/désactiver
 # les hitboxes, pas les fonctions

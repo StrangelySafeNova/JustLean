@@ -5,7 +5,6 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 @export var weapon: Weapon
-@export var weapon_rotation_point: Node2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -50,5 +49,7 @@ func attack() -> void:
 	weapon.attack()
 
 func rotate_weapon() -> void:
-	if weapon != null && weapon_rotation_point != null:
-		weapon_rotation_point.look_at(get_global_mouse_position())
+	if (weapon != null &&
+	weapon.rotation_point != null &&
+	!weapon.meat.animation_player.is_playing()):
+		weapon.rotation_point.look_at(get_global_mouse_position())
