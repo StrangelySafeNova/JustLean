@@ -4,10 +4,16 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+@export var weapon: Weapon
+@export var weapon_rotation_point: Node2D
+
 @onready var animated_sprite = $AnimatedSprite2D
 
 
 func _physics_process(_delta: float) -> void:
+	# bouger l'arme
+	rotate_weapon()
+
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var xdirection := Input.get_axis("left", "right")
@@ -30,4 +36,19 @@ func _physics_process(_delta: float) -> void:
 		
 	velocity.normalized()
 
+	# pour tout qui n'est pas le mouvement
+	handle_input()
+
 	move_and_slide()
+
+
+func handle_input() -> void:
+	if Input.is_action_just_pressed("attack") && weapon != null:
+		attack()
+
+func attack() -> void:
+	weapon.attack()
+
+func rotate_weapon() -> void:
+	if weapon != null && weapon_rotation_point != null:
+		weapon_rotation_point.look_at(get_global_mouse_position())

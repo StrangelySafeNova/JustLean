@@ -9,6 +9,8 @@ extends Node2D
 @export var attack_length: float
 # animation player qui contient l'animation
 @export var animation_player: AnimationPlayer
+# point autour duquel l'arme tourne
+@export var rotation_point: Node2D
 
 func attack() -> void:
 	animation_player.play(attack_animation)

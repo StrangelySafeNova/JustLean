@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d3thgs2v7vlfb" path="res://entities/player/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cqm2ubjw5bw4y" path="res://assets/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="2_qhqgy"]
 [ext_resource type="Script" uid="uid://ov5d8xagf34o" path="res://ressources/components/hurtbox.gd" id="3_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://bl4bstl3mq5tl" path="res://entities/static/weapons/banner_weapon.tscn" id="4_bls4j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("2_qhqgy")
@@ -245,8 +246,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
 radius = 15.033297
 
-[node name="Player" type="CharacterBody2D" unique_id=1516205552]
+[node name="Player" type="CharacterBody2D" unique_id=1516205552 node_paths=PackedStringArray("weapon", "weapon_rotation_point")]
 script = ExtResource("1_g2els")
+weapon = NodePath("weapon_rotation_point/Weapon")
+weapon_rotation_point = NodePath("weapon_rotation_point")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=557881738]
 sprite_frames = SubResource("SpriteFrames_a8ls1")
@@ -262,3 +265,9 @@ debug_color = Color(0, 0.6466152, 0.24022007, 0.41960785)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1889194379]
 shape = SubResource("CircleShape2D_g2els")
+
+[node name="weapon_rotation_point" type="Node2D" parent="." unique_id=1062857521]
+
+[node name="Weapon" parent="weapon_rotation_point" unique_id=1440209454 node_paths=PackedStringArray("rotation_point") instance=ExtResource("4_bls4j")]
+position = Vector2(82, 0)
+rotation_point = NodePath("..")
