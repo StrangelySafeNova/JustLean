@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://byabmqj0mbfgh" path="res://entities/ennemies/goblin_1.tscn" id="3_6q06x"]
 
 [node name="Main" type="Node2D" unique_id=1824804337]
+y_sort_enabled = true
 
 [node name="TileMap" type="Node2D" parent="." unique_id=117173919]
 
@@ -21,4 +22,5 @@ position = Vector2(233, 163)
 position_smoothing_enabled = true
 
 [node name="Goblin1" parent="." unique_id=675145452 instance=ExtResource("3_6q06x")]
+z_index = 5
 position = Vector2(410, 157)

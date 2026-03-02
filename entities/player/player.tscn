@@ -246,10 +246,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
 radius = 15.033297
 
-[node name="Player" type="CharacterBody2D" unique_id=1516205552 node_paths=PackedStringArray("weapon", "weapon_rotation_point")]
+[node name="Player" type="CharacterBody2D" unique_id=1516205552 node_paths=PackedStringArray("weapon")]
+y_sort_enabled = true
 script = ExtResource("1_g2els")
 weapon = NodePath("Weapon")
-weapon_rotation_point = NodePath("")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=557881738]
 sprite_frames = SubResource("SpriteFrames_a8ls1")
