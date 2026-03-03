@@ -8,6 +8,10 @@ const JUMP_VELOCITY = -400.0
 
 @onready var animated_sprite = $AnimatedSprite2D
 
+func _ready() -> void:
+	
+	collision_layer = 5
+	
 
 func _physics_process(_delta: float) -> void:
 	# bouger l'arme
