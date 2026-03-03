@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://byabmqj0mbfgh"]
 
-[ext_resource type="Script" uid="uid://51uyel6bdwto" path="res://entities/ennemies/goblin_1.gd" id="1_602vs"]
+[ext_resource type="Script" uid="uid://51uyel6bdwto" path="res://entities/ennemies/goblin_1/goblin_1.gd" id="1_602vs"]
 [ext_resource type="Texture2D" uid="uid://c27i8g5usa6ih" path="res://assets/Tiny Swords (Update 010)/Effects/Explosion/Explosions.png" id="2_ru68f"]
 [ext_resource type="Script" uid="uid://ov5d8xagf34o" path="res://ressources/components/hurtbox.gd" id="3_0xiuy"]
-[ext_resource type="Texture2D" uid="uid://bnmviv7umaxkp" path="res://entities/player/assets/Sprite_Goblin.png" id="3_a7kfg"]
-[ext_resource type="Texture2D" uid="uid://caa3hikj8yjo" path="res://entities/player/assets/Goblin_Walk-Sheet.png" id="4_qihyk"]
+[ext_resource type="Texture2D" uid="uid://bnmviv7umaxkp" path="res://entities/ennemies/goblin_1/Sprite_Goblin.png" id="3_a7kfg"]
+[ext_resource type="Texture2D" uid="uid://caa3hikj8yjo" path="res://entities/ennemies/goblin_1/Goblin_Walk-Sheet.png" id="4_qihyk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cbpt1"]
 atlas = ExtResource("2_ru68f")
