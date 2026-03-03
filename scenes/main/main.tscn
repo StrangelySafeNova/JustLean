@@ -19,6 +19,7 @@ z_index = 5
 position = Vector2(233, 163)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1625837260]
+zoom = Vector2(7, 7)
 position_smoothing_enabled = true
 
 [node name="Goblin1" parent="." unique_id=675145452 instance=ExtResource("3_6q06x")]
