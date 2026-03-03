@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0mrufp74xxsm"
-path="res://.godot/imported/Knight_Walk-Sheet-Sheet.png-1290b10d26c7632263724e2d00fc818e.ctex"
+path="res://.godot/imported/Knight_Walk-Sheet-Sheet.png-05fe8b7ec5771ebfcd9f7a21392ed9a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/player/assets/Knight_Walk-Sheet-Sheet.png"
-dest_files=["res://.godot/imported/Knight_Walk-Sheet-Sheet.png-1290b10d26c7632263724e2d00fc818e.ctex"]
+source_file="res://entities/player/knight/assets/Knight_Walk-Sheet-Sheet.png"
+dest_files=["res://.godot/imported/Knight_Walk-Sheet-Sheet.png-05fe8b7ec5771ebfcd9f7a21392ed9a4.ctex"]
 
 [params]
 

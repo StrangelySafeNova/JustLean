@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bl4bstl3mq5tl"]
+
+[ext_resource type="Script" uid="uid://de0hrsh0f2e21" path="res://ressources/components/weapon.gd" id="1_n0tbv"]
+[ext_resource type="PackedScene" uid="uid://r3pwqe4ioayl" path="res://entities/static/weapons/sword/banner_weapon_meat.tscn" id="2_ux4im"]
+
+[node name="Weapon" type="Node2D" unique_id=1440209454 node_paths=PackedStringArray("meat", "rotation_point")]
+script = ExtResource("1_n0tbv")
+attack_animation = "attack"
+attack_length = 0.2
+meat = NodePath("rotation_point/Banner_WeaponMeat")
+rotation_point = NodePath("rotation_point")
+point_meat_distance = 12
+damage = 10
+
+[node name="rotation_point" type="Node2D" parent="." unique_id=1842192033]
+
+[node name="Banner_WeaponMeat" parent="rotation_point" unique_id=860844465 instance=ExtResource("2_ux4im")]

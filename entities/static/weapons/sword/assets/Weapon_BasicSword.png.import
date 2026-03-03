@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bed8fqyn7t5ba"
-path="res://.godot/imported/Weapon_BasicSword.png-3ddf77a5ca186f63994dc1293c50c6dc.ctex"
+path="res://.godot/imported/Weapon_BasicSword.png-13e42a748a0342c627a0bb99930a9de7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/player/assets/Weapon_BasicSword.png"
-dest_files=["res://.godot/imported/Weapon_BasicSword.png-3ddf77a5ca186f63994dc1293c50c6dc.ctex"]
+source_file="res://entities/static/weapons/sword/assets/Weapon_BasicSword.png"
+dest_files=["res://.godot/imported/Weapon_BasicSword.png-13e42a748a0342c627a0bb99930a9de7.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnmviv7umaxkp"
-path="res://.godot/imported/Sprite_Goblin.png-d0a2a6fb63d70519b57d174c627ae786.ctex"
+uid="uid://d1yq5junncwjp"
+path="res://.godot/imported/Pickup_PurpleStuff.png-424b35efe42037e9e1f1c4aa00db4c4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/player/assets/Sprite_Goblin.png"
-dest_files=["res://.godot/imported/Sprite_Goblin.png-d0a2a6fb63d70519b57d174c627ae786.ctex"]
+source_file="res://entities/static/pickups/assets/Pickup_PurpleStuff.png"
+dest_files=["res://.godot/imported/Pickup_PurpleStuff.png-424b35efe42037e9e1f1c4aa00db4c4b.ctex"]
 
 [params]
 
