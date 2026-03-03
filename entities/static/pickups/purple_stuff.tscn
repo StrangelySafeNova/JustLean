@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://66s1w5y7y2l4"]
+
+[ext_resource type="Texture2D" uid="uid://d1yq5junncwjp" path="res://entities/static/pickups/assets/Pickup_PurpleStuff.png" id="1_am2v1"]
+[ext_resource type="Script" uid="uid://bspj565iv1iqd" path="res://entities/static/pickups/purple_stuff.gd" id="1_u58rw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u58rw"]
+size = Vector2(3, 3)
+
+[node name="PurpleStuff" type="Area2D" unique_id=2015009007]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_u58rw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2053982995]
+position = Vector2(1, -8)
+texture = ExtResource("1_am2v1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=994661044]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_u58rw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
