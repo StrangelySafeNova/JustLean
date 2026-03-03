@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnmviv7umaxkp"
-path="res://.godot/imported/Sprite_Goblin.png-76fc8423a46f00e5c6e0b4b3ec9f4e29.ctex"
+path="res://.godot/imported/Sprite_Goblin.png-7f972e72802b4c5b44f2dda3a074f4c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/ennemies/goblin_1/Sprite_Goblin.png"
-dest_files=["res://.godot/imported/Sprite_Goblin.png-76fc8423a46f00e5c6e0b4b3ec9f4e29.ctex"]
+source_file="res://entities/ennemies/goblin_1/assets/Sprite_Goblin.png"
+dest_files=["res://.godot/imported/Sprite_Goblin.png-7f972e72802b4c5b44f2dda3a074f4c8.ctex"]
 
 [params]
 
