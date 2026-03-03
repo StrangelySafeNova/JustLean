@@ -12,10 +12,8 @@ func _ready() -> void:
 # TODO: finite state machine
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta: float) -> void:
-	if velocity:
+	if velocity.length() > 0:
 		animated_sprite.play("walk")
-	else:
-		animated_sprite.play("idle")
 	
 	if velocity.x < 0:
 		animated_sprite.flip_h = true
