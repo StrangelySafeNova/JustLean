@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://51uyel6bdwto" path="res://entities/ennemies/goblin_1/goblin_1.gd" id="1_602vs"]
 [ext_resource type="Texture2D" uid="uid://c27i8g5usa6ih" path="res://assets/Tiny Swords (Update 010)/Effects/Explosion/Explosions.png" id="2_ru68f"]
 [ext_resource type="Script" uid="uid://ov5d8xagf34o" path="res://ressources/components/hurtbox.gd" id="3_0xiuy"]
-[ext_resource type="Texture2D" uid="uid://bnmviv7umaxkp" path="res://entities/ennemies/goblin_1/Sprite_Goblin.png" id="3_a7kfg"]
-[ext_resource type="Texture2D" uid="uid://caa3hikj8yjo" path="res://entities/ennemies/goblin_1/Goblin_Walk-Sheet.png" id="4_qihyk"]
+[ext_resource type="Texture2D" uid="uid://bnmviv7umaxkp" path="res://entities/ennemies/goblin_1/assets/Sprite_Goblin.png" id="3_a7kfg"]
+[ext_resource type="Texture2D" uid="uid://caa3hikj8yjo" path="res://entities/ennemies/goblin_1/assets/Goblin_Walk-Sheet.png" id="4_qihyk"]
+[ext_resource type="Script" uid="uid://b2m3e6bqb1tr6" path="res://ressources/state_machine/finite_state_machine.gd" id="6_by1ac"]
+[ext_resource type="Script" uid="uid://c3mqiw8dma1e6" path="res://ressources/state_machine/states/follow_state.gd" id="7_cx5bt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cbpt1"]
 atlas = ExtResource("2_ru68f")
@@ -158,6 +160,7 @@ health = 10
 weight = 10
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=536045944]
+unique_name_in_owner = true
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_1rfua")
 animation = &"walk"
@@ -178,3 +181,14 @@ shape = SubResource("CircleShape2D_qexou")
 debug_color = Color(0, 0.6499802, 0.133382, 0.41960785)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1059802411]
+
+[node name="FiniteStateMachine" type="Node" parent="." unique_id=1214861242 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("6_by1ac")
+initial_state = NodePath("FollowState")
+metadata/_custom_type_script = "uid://b2m3e6bqb1tr6"
+
+[node name="FollowState" type="Node" parent="FiniteStateMachine" unique_id=1975776833 node_paths=PackedStringArray("this")]
+script = ExtResource("7_cx5bt")
+this = NodePath("../..")
+weight = 10
+metadata/_custom_type_script = "uid://dlmfpi7d752k0"
