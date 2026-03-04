@@ -20,6 +20,8 @@ func _physics_process(_delta: float) -> void:
 	elif velocity.x > 0:
 		animated_sprite.flip_h = false
 
+	move_and_slide()
+
 func take_damage(damage: int) -> void:
 	health -= damage
 	print("Damage taken:", damage)

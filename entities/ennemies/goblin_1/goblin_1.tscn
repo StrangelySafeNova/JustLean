@@ -157,7 +157,6 @@ radius = 5.0
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1428498190]
 script = ExtResource("1_602vs")
 health = 10
-weight = 10
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=536045944]
 unique_name_in_owner = true
@@ -190,5 +189,5 @@ metadata/_custom_type_script = "uid://b2m3e6bqb1tr6"
 [node name="FollowState" type="Node" parent="FiniteStateMachine" unique_id=1975776833 node_paths=PackedStringArray("this")]
 script = ExtResource("7_cx5bt")
 this = NodePath("../..")
-weight = 10
+speed = 40.0
 metadata/_custom_type_script = "uid://dlmfpi7d752k0"
