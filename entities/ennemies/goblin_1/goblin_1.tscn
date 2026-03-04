@@ -165,10 +165,8 @@ state_machine = NodePath("FiniteStateMachine")
 unique_name_in_owner = true
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_1rfua")
-animation = &"death"
+animation = &"idle"
 autoplay = "idle"
-frame = 8
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=198387086]
 position = Vector2(0, 1)

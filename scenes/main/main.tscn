@@ -60,3 +60,12 @@ position = Vector2(214, 185)
 
 [node name="PurpleStuff7" parent="PurpleStuff" unique_id=287151327 instance=ExtResource("4_l3cfh")]
 position = Vector2(261, 209)
+
+[node name="Goblin1" parent="." unique_id=804432772 instance=ExtResource("3_6q06x")]
+position = Vector2(163, 221)
+
+[node name="Goblin2" parent="." unique_id=440661622 instance=ExtResource("3_6q06x")]
+position = Vector2(252, 250)
+
+[node name="Goblin3" parent="." unique_id=43023089 instance=ExtResource("3_6q06x")]
+position = Vector2(157, 174)
