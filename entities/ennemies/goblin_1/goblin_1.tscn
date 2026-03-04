@@ -154,7 +154,7 @@ radius = 2.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_qexou"]
 radius = 5.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1428498190]
+[node name="Goblin1" type="CharacterBody2D" unique_id=1428498190]
 script = ExtResource("1_602vs")
 health = 10
 
