@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://caa3hikj8yjo" path="res://entities/ennemies/goblin_1/assets/Goblin_Walk-Sheet.png" id="4_qihyk"]
 [ext_resource type="Script" uid="uid://b2m3e6bqb1tr6" path="res://ressources/state_machine/finite_state_machine.gd" id="6_by1ac"]
 [ext_resource type="Script" uid="uid://c3mqiw8dma1e6" path="res://ressources/state_machine/states/follow_state.gd" id="7_cx5bt"]
+[ext_resource type="Script" uid="uid://tfq3inmt8jm6" path="res://ressources/state_machine/states/death_state.gd" id="8_cx5bt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cbpt1"]
 atlas = ExtResource("2_ru68f")
@@ -154,9 +155,10 @@ radius = 2.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_qexou"]
 radius = 5.0
 
-[node name="Goblin1" type="CharacterBody2D" unique_id=1428498190]
+[node name="Goblin1" type="CharacterBody2D" unique_id=1428498190 node_paths=PackedStringArray("state_machine")]
 script = ExtResource("1_602vs")
 health = 10
+state_machine = NodePath("FiniteStateMachine")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=536045944]
 unique_name_in_owner = true
@@ -179,15 +181,17 @@ position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_qexou")
 debug_color = Color(0, 0.6499802, 0.133382, 0.41960785)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1059802411]
-
 [node name="FiniteStateMachine" type="Node" parent="." unique_id=1214861242 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("6_by1ac")
-initial_state = NodePath("FollowState")
+initial_state = NodePath("Follow")
 metadata/_custom_type_script = "uid://b2m3e6bqb1tr6"
 
-[node name="FollowState" type="Node" parent="FiniteStateMachine" unique_id=1975776833 node_paths=PackedStringArray("this")]
+[node name="Follow" type="Node" parent="FiniteStateMachine" unique_id=1975776833 node_paths=PackedStringArray("this")]
 script = ExtResource("7_cx5bt")
 this = NodePath("../..")
 speed = 40.0
+metadata/_custom_type_script = "uid://dlmfpi7d752k0"
+
+[node name="Death" type="Node" parent="FiniteStateMachine" unique_id=1923111760]
+script = ExtResource("8_cx5bt")
 metadata/_custom_type_script = "uid://dlmfpi7d752k0"

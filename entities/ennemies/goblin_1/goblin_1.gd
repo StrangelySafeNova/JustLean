@@ -1,16 +1,13 @@
 extends CharacterBody2D
 
 @export var health: int
+@export var state_machine: FiniteStateMachine
 
 @onready var player = %Player
 @onready var animated_sprite = %AnimatedSprite2D
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	print(player)
+var dead = false
 
-# TODO: finite state machine
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta: float) -> void:
 	if velocity.length() > 0:
 		animated_sprite.play("walk")
@@ -24,11 +21,6 @@ func _physics_process(_delta: float) -> void:
 
 func take_damage(damage: int) -> void:
 	health -= damage
-	print("Damage taken:", damage)
-	print("Current health:", health)
 
 	if health <= 0:
-		die()
-	
-func die() -> void:
-	queue_free()
+		state_machine.current_state.Transitioned.emit(state_machine.current_state, "death")
