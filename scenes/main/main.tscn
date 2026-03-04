@@ -28,16 +28,17 @@ zoom = Vector2(4.5, 4.5)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
-[node name="Ennemies" type="Node" parent="." unique_id=2001692247]
+[node name="Ennemies" type="Node2D" parent="." unique_id=664627909]
+z_index = 5
+y_sort_enabled = true
 
 [node name="Goblin2" parent="Ennemies" unique_id=1428498190 instance=ExtResource("3_6q06x")]
 position = Vector2(368, 205)
 
 [node name="Goblin1" parent="Ennemies" unique_id=675145452 instance=ExtResource("3_6q06x")]
-z_index = 5
 position = Vector2(410, 157)
 
-[node name="PurpleStuff" type="Node" parent="." unique_id=1747506332]
+[node name="PurpleStuff" type="Node2D" parent="." unique_id=1284132426]
 
 [node name="PurpleStuff1" parent="PurpleStuff" unique_id=381359725 instance=ExtResource("4_l3cfh")]
 position = Vector2(265, 170)

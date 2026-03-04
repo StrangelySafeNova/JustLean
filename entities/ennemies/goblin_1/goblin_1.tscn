@@ -156,6 +156,7 @@ radius = 2.0
 radius = 5.0
 
 [node name="Goblin1" type="CharacterBody2D" unique_id=1428498190 node_paths=PackedStringArray("state_machine")]
+y_sort_enabled = true
 script = ExtResource("1_602vs")
 health = 10
 state_machine = NodePath("FiniteStateMachine")
@@ -164,8 +165,10 @@ state_machine = NodePath("FiniteStateMachine")
 unique_name_in_owner = true
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_1rfua")
-animation = &"walk"
+animation = &"death"
 autoplay = "idle"
+frame = 8
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=198387086]
 position = Vector2(0, 1)
