@@ -4,6 +4,8 @@ extends State
 @export var animation_name: String = "death"
 
 func enter() -> void:
+	# Disable collision
+	owner.collision_layer = 0
 	# Resets velocity so that walking animation does not play
 	owner.velocity = Vector2.ZERO
 
@@ -19,4 +21,3 @@ func update(_delta: float) -> void:
 
 func physics_update(_delta: float) -> void:
 	owner.velocity = Vector2.ZERO
-
