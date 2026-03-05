@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://c27syjoo177rq" path="res://scenes/main_tile_set.tres" id="1_k2fmo"]
 [ext_resource type="PackedScene" uid="uid://b3j6ddd13g2is" path="res://entities/player/player.tscn" id="2_l3cfh"]
 [ext_resource type="PackedScene" uid="uid://byabmqj0mbfgh" path="res://entities/ennemies/goblin_1/goblin_1.tscn" id="3_6q06x"]
-[ext_resource type="PackedScene" path="res://entities/static/pickups/purple_stuff.tscn" id="4_l3cfh"]
+[ext_resource type="PackedScene" uid="uid://66s1w5y7y2l4" path="res://entities/static/pickups/PurpleThing/purple_stuff.tscn" id="4_l3cfh"]
 
 [node name="Main" type="Node2D" unique_id=1824804337]
 y_sort_enabled = true

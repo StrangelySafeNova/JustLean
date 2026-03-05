@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://66s1w5y7y2l4"]
 
-[ext_resource type="Texture2D" uid="uid://d1yq5junncwjp" path="res://entities/static/pickups/assets/Pickup_PurpleStuff.png" id="1_am2v1"]
-[ext_resource type="Script" uid="uid://bspj565iv1iqd" path="res://entities/static/pickups/purple_stuff.gd" id="1_u58rw"]
+[ext_resource type="Texture2D" uid="uid://d1yq5junncwjp" path="res://entities/static/pickups/PurpleThing/assets/Pickup_PurpleStuff.png" id="1_am2v1"]
+[ext_resource type="Script" uid="uid://bspj565iv1iqd" path="res://entities/static/pickups/PurpleThing/purple_stuff.gd" id="1_u58rw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u58rw"]
 size = Vector2(3, 3)
