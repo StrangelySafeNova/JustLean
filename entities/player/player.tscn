@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://ov5d8xagf34o" path="res://ressources/components/hurtbox.gd" id="3_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://bl4bstl3mq5tl" path="res://entities/static/weapons/sword/banner_weapon.tscn" id="4_bls4j"]
 [ext_resource type="Texture2D" uid="uid://c0mrufp74xxsm" path="res://entities/player/knight/assets/Knight_Walk-Sheet-Sheet.png" id="4_qiwj3"]
+[ext_resource type="Script" uid="uid://cnbmu6ar6lyxy" path="res://ressources/components/health.gd" id="7_qiwj3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("2_qhqgy")
@@ -258,3 +259,7 @@ debug_color = Color(0, 0.6466152, 0.24022007, 0.41960785)
 shape = SubResource("CircleShape2D_g2els")
 
 [node name="Weapon" parent="." unique_id=1440209454 instance=ExtResource("4_bls4j")]
+
+[node name="Health" type="Node" parent="." unique_id=1185165964]
+script = ExtResource("7_qiwj3")
+metadata/_custom_type_script = "uid://cnbmu6ar6lyxy"
