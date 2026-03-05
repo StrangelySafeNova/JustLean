@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 
+@onready var health: Health = $Health
 @export var SPEED = 90.0
 const JUMP_VELOCITY = -400.0
 
@@ -58,7 +59,8 @@ func rotate_weapon() -> void:
 	!weapon.meat.animation_player.is_playing()):
 		weapon.rotation_point.look_at(get_global_mouse_position())
 		
-
+func take_damage(damage: int) -> void:
+	health.set_health(health.get_health() - 1)
 
 func _on_health_health_depleted() -> void:
 	pass # Replace with function body.
