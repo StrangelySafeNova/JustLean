@@ -5,7 +5,7 @@ extends CharacterBody2D
 const JUMP_VELOCITY = -400.0
 
 @export var weapon: Weapon
-
+var PurpleStuff = 0
 @onready var animated_sprite = $AnimatedSprite2D
 
 func _ready() -> void:
@@ -57,3 +57,8 @@ func rotate_weapon() -> void:
 	weapon.rotation_point != null &&
 	!weapon.meat.animation_player.is_playing()):
 		weapon.rotation_point.look_at(get_global_mouse_position())
+		
+
+
+func _on_health_health_depleted() -> void:
+	pass # Replace with function body.
