@@ -1,12 +1,15 @@
 extends CharacterBody2D
 
-@export var health: int
+@export var health: Health
 @export var state_machine: FiniteStateMachine
 
 @onready var player = %Player
 @onready var animated_sprite = %AnimatedSprite2D
 
 var dead = false
+
+func _ready() -> void:
+	pass
 
 func _physics_process(_delta: float) -> void:
 	if velocity.length() > 0:
@@ -20,7 +23,8 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 func take_damage(damage: int) -> void:
-	health -= damage
+	if (state_machine.current_state.name != "death"):
+		health.set_health(health.get_health() - damage)
 
-	if health <= 0:
-		state_machine.current_state.Transitioned.emit(state_machine.current_state, "death")
+func _on_health_depleted() -> void:
+	state_machine.current_state.Transitioned.emit(state_machine.current_state, "death")

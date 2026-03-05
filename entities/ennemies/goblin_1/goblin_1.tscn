@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://b2m3e6bqb1tr6" path="res://ressources/state_machine/finite_state_machine.gd" id="6_by1ac"]
 [ext_resource type="Script" uid="uid://c3mqiw8dma1e6" path="res://ressources/state_machine/states/follow_state.gd" id="7_cx5bt"]
 [ext_resource type="Script" uid="uid://tfq3inmt8jm6" path="res://ressources/state_machine/states/death_state.gd" id="8_cx5bt"]
+[ext_resource type="Script" uid="uid://cnbmu6ar6lyxy" path="res://ressources/components/health.gd" id="9_xssir"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cbpt1"]
 atlas = ExtResource("2_ru68f")
@@ -155,10 +156,10 @@ radius = 2.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_qexou"]
 radius = 5.0
 
-[node name="Goblin1" type="CharacterBody2D" unique_id=1428498190 node_paths=PackedStringArray("state_machine")]
+[node name="Goblin1" type="CharacterBody2D" unique_id=1428498190 node_paths=PackedStringArray("health", "state_machine")]
 y_sort_enabled = true
 script = ExtResource("1_602vs")
-health = 10
+health = NodePath("Health")
 state_machine = NodePath("FiniteStateMachine")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=536045944]
@@ -196,3 +197,10 @@ metadata/_custom_type_script = "uid://dlmfpi7d752k0"
 [node name="Death" type="Node" parent="FiniteStateMachine" unique_id=1923111760]
 script = ExtResource("8_cx5bt")
 metadata/_custom_type_script = "uid://dlmfpi7d752k0"
+
+[node name="Health" type="Node" parent="." unique_id=1716969560]
+script = ExtResource("9_xssir")
+max_health = 15
+metadata/_custom_type_script = "uid://cnbmu6ar6lyxy"
+
+[connection signal="health_depleted" from="Health" to="." method="_on_health_depleted"]
